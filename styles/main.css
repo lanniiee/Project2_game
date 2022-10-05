@@ -11,7 +11,7 @@ body {
   width: 100vw;
   height: 100vh;
   color: black;
-  background-image: url("../6347260.jpg");
+  background-image: url("/Images/6347260.jpg");
   background-size: cover;
   font-size: 1.1rem;
 }
@@ -144,29 +144,25 @@ body .footer .next-button {
     font-size: 3rem;
   }
   body .navigation {
-    display: block;
-    width: 1600px;
-    height: 15vh;
+    width: 1500px;
   }
   body .navigation .home {
-    width: 70px;
-    height: 70px;
-    margin: 30px;
-    padding-left: 30px;
+    width: 60px;
+    height: 60px;
   }
   body .quiz {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 1500px;
-    height: 70vh;
+    width: 1200px;
+    height: 50vh;
     margin-top: 30px;
     margin-bottom: 10px;
   }
   body .quiz .question-display {
     width: 100%;
-    height: 40%;
+    height: 250px;
     border: 2px solid rgb(255, 255, 255);
     margin-bottom: 20px;
     border-radius: 10px;
@@ -179,7 +175,7 @@ body .footer .next-button {
   }
   body .quiz .cards {
     width: 100%;
-    height: 40;
+    height: 250px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -187,8 +183,8 @@ body .footer .next-button {
     gap: 20px;
   }
   body .quiz .cards .cards__answer {
-    width: 320px;
-    height: 200px;
+    width: 270px;
+    height: 100px;
     border: 2px solid white;
     border-radius: 10px;
     display: flex;
@@ -197,15 +193,16 @@ body .footer .next-button {
     flex-wrap: wrap;
     background-color: rgb(72, 151, 72);
     opacity: 0.7;
+    font-size: 1.3rem;
   }
   body .footer {
-    height: 15vh;
+    height: 10vh;
   }
   body .footer .next-button {
     width: 250px;
     height: 60px;
     border: 2px solid grey;
     border-radius: 5px;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 }/*# sourceMappingURL=main.css.map */
