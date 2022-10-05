@@ -1,0 +1,211 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  color: black;
+  background-image: url("../6347260.jpg");
+  background-size: cover;
+  font-size: 1.1rem;
+}
+body .navigation {
+  display: block;
+  width: 340px;
+  height: 7vh;
+}
+body .navigation .home {
+  width: 40px;
+  height: 40px;
+}
+body .quiz {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 80vh;
+}
+body .quiz .question-display {
+  width: 100%;
+  height: 30%;
+  border: 2px solid rgb(255, 255, 255);
+  margin-bottom: 10px;
+  border-radius: 10px;
+  background-color: rgb(136, 136, 136);
+  opacity: 0.7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+body .quiz .cards {
+  width: 100%;
+  height: 70vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+body .quiz .cards .cards__answer {
+  width: auto;
+  height: auto;
+  border: 2px solid white;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: rgb(72, 151, 72);
+  opacity: 0.7;
+}
+body .footer .next-button {
+  width: 120px;
+  height: 40px;
+  border: 2px solid grey;
+  border-radius: 5px;
+}
+
+@media screen and (min-width: 820px) {
+  body {
+    font-size: 2rem;
+  }
+  body .navigation {
+    display: block;
+    width: 820px;
+    height: 10vh;
+  }
+  body .navigation .home {
+    width: 70px;
+    height: 70px;
+    margin: 30px;
+    padding-left: 30px;
+  }
+  body .quiz {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 680px;
+    height: 70vh;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  body .quiz .question-display {
+    width: 100%;
+    height: 30%;
+    border: 2px solid rgb(255, 255, 255);
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: rgb(136, 136, 136);
+    opacity: 0.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  body .quiz .cards {
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+  body .quiz .cards .cards__answer {
+    width: 320px;
+    height: 200px;
+    border: 2px solid white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgb(72, 151, 72);
+    opacity: 0.7;
+  }
+  body .footer .next-button {
+    width: 120px;
+    height: 40px;
+    border: 2px solid grey;
+    border-radius: 5px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  body {
+    font-size: 3rem;
+  }
+  body .navigation {
+    display: block;
+    width: 1600px;
+    height: 15vh;
+  }
+  body .navigation .home {
+    width: 70px;
+    height: 70px;
+    margin: 30px;
+    padding-left: 30px;
+  }
+  body .quiz {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 1500px;
+    height: 70vh;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  body .quiz .question-display {
+    width: 100%;
+    height: 40%;
+    border: 2px solid rgb(255, 255, 255);
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: rgb(136, 136, 136);
+    opacity: 0.8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  body .quiz .cards {
+    width: 100%;
+    height: 40;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+  body .quiz .cards .cards__answer {
+    width: 320px;
+    height: 200px;
+    border: 2px solid white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgb(72, 151, 72);
+    opacity: 0.7;
+  }
+  body .footer {
+    height: 15vh;
+  }
+  body .footer .next-button {
+    width: 250px;
+    height: 60px;
+    border: 2px solid grey;
+    border-radius: 5px;
+    font-size: 1.5rem;
+  }
+}/*# sourceMappingURL=main.css.map */
