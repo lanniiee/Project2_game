@@ -48,7 +48,7 @@ const displayNextQuestion = () => {
     A.dataset.answer = countriesArr[firstCounter].A[1];
     B.dataset.answer =countriesArr[firstCounter].B[1];
     C.dataset.answer = countriesArr[firstCounter].C[1];
-    D.dataset.aanswer = countriesArr[firstCounter].D[1];
+    D.dataset.answer = countriesArr[firstCounter].D[1];
     
     firstCounter++;
     reset();
@@ -62,7 +62,6 @@ const selectAnswer = (event) => {
         selectedButton.classList.add("incorrect");
     }
     nextButton.classList.remove("hide");
-    calculateScores()
 };
 
 //function to reset for next question
@@ -79,6 +78,16 @@ const resetPage = () => {
     location.reload();
 }
 
+let totalScores = 0;
+// function to calculate score
+const calculateScores = (event) => {
+    const selectedButton = event.target;
+    if (selectedButton.dataset.answer == "correct") {
+        totalScores++;
+    }
+    score.textContent = `Score: ${totalScores} / 17`;
+}
+
 // function countdown
 
 // Add event listener
@@ -86,3 +95,4 @@ startButton.addEventListener("click", startQuiz);
 answersContainer.addEventListener("click", selectAnswer);
 nextButton.addEventListener("click", setNextQuestion);
 homeButton.addEventListener("click", resetPage);
+answersContainer.addEventListener("click", calculateScores);
