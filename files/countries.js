@@ -75,7 +75,7 @@ export const countriesArr = [
         question: "What is the capital city of Thailand?",
         A: ["Phuket", "incorrect"],
         B: ["Bangkok", "correct"],
-        C: ["Chiang Mai", "incorrect"]
+        C: ["Chiang Mai", "incorrect"],
         D: ["Mueang Chiang Rai", "incorrect"],
     },
 

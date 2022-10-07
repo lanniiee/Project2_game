@@ -39,10 +39,16 @@ const setNextQuestion = (question) => {
 const displayNextQuestion = (country) => {
     countriesArr.forEach((country) => {
         display.innerText = country.question;
-        A.innerText = country.A;
-        B.innerText = country.B;
-        C.innerText = country.C;
-        D.innerText = country.D;
+
+        A.innerText = country.A[0];
+        B.innerText = country.B[0];
+        C.innerText = country.C[0];
+        D.innerText = country.D[0];
+
+        A.dataset.answer = country.A[1];
+        B.dataset.answer = country.B[1];
+        C.dataset.answer = country.C[1];
+        D.dataset.answer = country.D[1];
     })
 
 }
@@ -50,11 +56,8 @@ const displayNextQuestion = (country) => {
 // function to select answer
 const selectAnswer = (event) => {
     const selectedButton = event.target;
-    const buttonValue = event.target.value;
     countriesArr.forEach((country) => {
-        if (buttonValue === country.answer) {
-            console.log("correct");
-        }
+
     })
 }
 
