@@ -10,24 +10,27 @@
 <body>
     <nav class="navigation">
         <img src="Images/home.svg" alt="home-button" class="home">
+        <h1 class="score">Score: </h1>
+        <h1 class="countdown">Counting Down: </h1>
     </nav>
 
     <main class="quiz">
         <div class="question-display">
-            display
+            
         </div>
 
         <div class="cards">
-            <button class="cards__answer">each card</button>
-            <button class="cards__answer">each card</button>
-            <button class="cards__answer">each card</button>
-            <button class="cards__answer">each card</button>
+            <button class="cards__answer" id="A" data-correct="false"></button>
+            <button class="cards__answer" id="B" data-correct="false"></button>
+            <button class="cards__answer" id="C" data-correct="false"></button>
+            <button class="cards__answer" id="D" data-correct="false"></button>
         </div>
     </main>
 
     <footer class="footer">
-        <button class="next-button">Next Question</button>
+        <button class="start-button">Start</button>
+        <button class="next-button hide">Next Question</button>
     </footer>
 </body>
-<script src="script.js"></script>
+<script src="script.js" type="module"></script>
 </html>

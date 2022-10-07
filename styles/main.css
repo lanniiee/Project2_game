@@ -4,6 +4,7 @@
 }
 
 body {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -14,33 +15,46 @@ body {
   background-image: url("/Images/6347260.jpg");
   background-size: cover;
   font-size: 1.1rem;
+  font-family: Arial, Helvetica, sans-serif;
 }
 body .navigation {
-  display: block;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
   width: 340px;
   height: 7vh;
 }
 body .navigation .home {
   width: 40px;
   height: 40px;
+  text-shadow: 0 0 10px red;
+  margin: 10px;
+}
+body .navigation .countdown, body .navigation .score {
+  color: rgb(226, 226, 226);
+  text-shadow: 0 0 10px rgb(65, 115, 65);
+  font-size: 1rem;
 }
 body .quiz {
-  padding: 10px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 300px;
-  height: 80vh;
+  height: 90vh;
+  border-radius: 20px;
+  box-shadow: 0 0 20px 10px black;
 }
 body .quiz .question-display {
   width: 100%;
   height: 30%;
   border: 2px solid rgb(255, 255, 255);
-  margin-bottom: 10px;
+  margin-bottom: 30px;
   border-radius: 10px;
   background-color: rgb(136, 136, 136);
-  opacity: 0.7;
+  opacity: 0.8;
+  font-weight: bolder;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -50,27 +64,31 @@ body .quiz .cards {
   width: 100%;
   height: 70vh;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
   gap: 10px;
 }
 body .quiz .cards .cards__answer {
   width: auto;
   height: auto;
-  border: 2px solid white;
+  border: 2px solid grey;
   border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  background-color: rgb(72, 151, 72);
-  opacity: 0.7;
+  background-color: rgb(255, 255, 255);
+  opacity: 0.8;
 }
-body .footer .next-button {
+body .footer .start-button, body .footer .next-button {
   width: 120px;
   height: 40px;
   border: 2px solid grey;
   border-radius: 5px;
+  margin: 10px;
+}
+body .footer .hide {
+  display: none;
 }
 
 @media screen and (min-width: 820px) {
@@ -78,15 +96,16 @@ body .footer .next-button {
     font-size: 2rem;
   }
   body .navigation {
-    display: block;
     width: 820px;
     height: 10vh;
   }
   body .navigation .home {
-    width: 70px;
-    height: 70px;
-    margin: 30px;
+    width: 50px;
+    height: 50px;
     padding-left: 30px;
+  }
+  body .navigation .score, body .navigation .countdown {
+    font-size: 2rem;
   }
   body .quiz {
     display: flex;
@@ -94,7 +113,7 @@ body .footer .next-button {
     justify-content: center;
     align-items: center;
     width: 680px;
-    height: 70vh;
+    height: 65vh;
     margin-top: 30px;
     margin-bottom: 10px;
   }
@@ -129,14 +148,16 @@ body .footer .next-button {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    background-color: rgb(72, 151, 72);
     opacity: 0.7;
+    font-size: 2rem;
   }
-  body .footer .next-button {
+  body .footer .start-button, body .footer .next-button {
     width: 120px;
     height: 40px;
-    border: 2px solid grey;
+    border: 2px solid white;
     border-radius: 5px;
+    box-shadow: 0 0 10px 2px black;
+    font-size: 1rem;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -144,11 +165,14 @@ body .footer .next-button {
     font-size: 3rem;
   }
   body .navigation {
-    width: 1500px;
+    width: 1350px;
   }
   body .navigation .home {
     width: 60px;
     height: 60px;
+  }
+  body .navigation .countdown, body .navigation .score {
+    font-size: 3rem;
   }
   body .quiz {
     display: flex;
@@ -163,10 +187,8 @@ body .footer .next-button {
   body .quiz .question-display {
     width: 100%;
     height: 250px;
-    border: 2px solid rgb(255, 255, 255);
     margin-bottom: 20px;
     border-radius: 10px;
-    background-color: rgb(136, 136, 136);
     opacity: 0.8;
     display: flex;
     justify-content: center;
@@ -185,24 +207,29 @@ body .footer .next-button {
   body .quiz .cards .cards__answer {
     width: 270px;
     height: 100px;
-    border: 2px solid white;
     border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    background-color: rgb(72, 151, 72);
     opacity: 0.7;
     font-size: 1.3rem;
   }
   body .footer {
     height: 10vh;
   }
-  body .footer .next-button {
+  body .footer .start-button, body .footer .next-button {
     width: 250px;
     height: 60px;
     border: 2px solid grey;
     border-radius: 5px;
     font-size: 1.3rem;
   }
+}
+.correct {
+  color: greenyellow;
+}
+
+.incorrect {
+  color: red;
 }/*# sourceMappingURL=main.css.map */
