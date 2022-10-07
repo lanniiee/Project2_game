@@ -31,12 +31,12 @@ const startQuiz = () => {
     setNextQuestion();
 }
 
-// function to set new question
+// function to set new question random
 const setNextQuestion = () => {
     displayNextQuestion(randomQuestion[currentQuestionIndex]);
 }
 
-// function to set next question
+// function to set next question when clicking next button
 const displayNextQuestion = () => {
     display.textContent = countriesArr[firstCounter].question;
     A.textContent = countriesArr[firstCounter].A[0];
@@ -57,8 +57,10 @@ const selectAnswer = (event) => {
     const selectedButton = event.target;
     if (selectedButton.dataset.answer === "correct") {
         selectedButton.classList.add("correct");
+        selectedButton.style.backgroundColor = "green";
     } else {
         selectedButton.classList.add("incorrect");
+        selectedButton.style.backgroundColor = "red";
     }
     nextButton.classList.remove("hide");
 };
@@ -66,12 +68,12 @@ const selectAnswer = (event) => {
 //function to reset
 const reset = () => {
     nextButton.classList.add("hide");
-
 }
 
-// function for clicking on next question
-
-// function for when the correct button is clicked. change colour to green, 
+//function to reset page
+const resetPage = () => {
+    location.reload();
+}
 
 // function countdown
 
@@ -81,4 +83,4 @@ const reset = () => {
 startButton.addEventListener("click", startQuiz);
 answersContainer.addEventListener("click", selectAnswer);
 nextButton.addEventListener("click", setNextQuestion);
-
+homeButton.addEventListener("click", resetPage);

@@ -22,18 +22,19 @@ body .navigation {
   justify-content: space-between;
   align-items: baseline;
   width: 340px;
-  height: 7vh;
+  height: 10vh;
 }
 body .navigation .home {
   width: 40px;
   height: 40px;
   text-shadow: 0 0 10px red;
-  margin: 10px;
+  margin-top: 20px;
 }
 body .navigation .countdown, body .navigation .score {
   color: rgb(226, 226, 226);
   text-shadow: 0 0 10px rgb(65, 115, 65);
   font-size: 1rem;
+  padding-bottom: 40px 0;
 }
 body .quiz {
   padding: 20px;
@@ -42,7 +43,7 @@ body .quiz {
   justify-content: center;
   align-items: center;
   width: 300px;
-  height: 90vh;
+  height: 80vh;
   border-radius: 20px;
   box-shadow: 0 0 20px 10px black;
 }
@@ -78,7 +79,6 @@ body .quiz .answers .cards__answer {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  background-color: rgb(255, 255, 255);
   opacity: 0.8;
 }
 body .footer {
@@ -229,11 +229,4 @@ body .footer .hide {
     border-radius: 5px;
     font-size: 1.3rem;
   }
-}
-.correct {
-  background-color: green;
-}
-
-.incorrect {
-  background-color: red;
 }/*# sourceMappingURL=main.css.map */
