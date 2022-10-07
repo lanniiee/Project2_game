@@ -30,6 +30,7 @@ const startQuiz = () => {
     randomQuestion = countriesArr.sort(() => Math.random() -0.5);
     currentQuestionIndex = 0;
     setNextQuestion();
+    answersContainer.dataset.start = "true";
 }
 
 // function to set new question random
@@ -46,7 +47,7 @@ const displayNextQuestion = () => {
     D.textContent = countriesArr[firstCounter].D[0];
     
     A.dataset.answer = countriesArr[firstCounter].A[1];
-    B.dataset.answer =countriesArr[firstCounter].B[1];
+    B.dataset.answer = countriesArr[firstCounter].B[1];
     C.dataset.answer = countriesArr[firstCounter].C[1];
     D.dataset.answer = countriesArr[firstCounter].D[1];
     
@@ -55,13 +56,15 @@ const displayNextQuestion = () => {
 }
 // function to select answer
 const selectAnswer = (event) => {
-    const selectedButton = event.target;
-    if (selectedButton.dataset.answer === "correct") {
-        selectedButton.classList.add("correct");
-    } else {
-        selectedButton.classList.add("incorrect");
+    if (answersContainer.dataset.start === "true") {
+        const selectedButton = event.target;
+        if (selectedButton.dataset.answer === "correct") {
+            selectedButton.classList.add("correct");
+        } else if (selectedButton.dataset.answer === "incorrect") {
+            selectedButton.classList.add("incorrect");
+        }
+        nextButton.classList.remove("hide");
     }
-    nextButton.classList.remove("hide");
 };
 
 //function to reset for next question
