@@ -1,6 +1,5 @@
 // make a js file of questions and answers. Then import to this js file.
 import { countriesArr } from "./files/countries.js";
-console.log(countriesArr);
 
 
 // Select elements from HTML
@@ -10,7 +9,7 @@ const display = document.querySelector(".question-display");
 const score = document.querySelector(".score");
 const countdown = document.querySelector(".score");
 const homeButton = document.querySelector(".home");
-const cardContainer = document.querySelector(".cards");
+const answersContainer = document.querySelector(".answers");
 const A = document.getElementById("A");
 const B = document.getElementById("B");
 const C = document.getElementById("C");
@@ -20,8 +19,6 @@ const D = document.getElementById("D");
 // variables to later shuffle questions, and for current question
 let randomQuestion;
 let currentQuestionIndex;
-
-
 
 
 // function to start
@@ -53,8 +50,12 @@ const displayNextQuestion = (country) => {
 // function to select answer
 const selectAnswer = (event) => {
     const selectedButton = event.target;
-    const correctAnswer = selectedButton.dataset.correct;
-
+    const buttonValue = event.target.value;
+    countriesArr.forEach((country) => {
+        if (buttonValue === country.answer) {
+            console.log("correct");
+        }
+    })
 }
 
 //function to reset
@@ -73,5 +74,5 @@ const reset = () => {
 
 // Add event listener
 startButton.addEventListener("click", startQuiz);
-
+answersContainer.addEventListener("click", selectAnswer);
 
