@@ -51,15 +51,20 @@ const displayNextQuestion = (country) => {
         D.dataset.answer = country.D[1];
     })
 
+    reset();
+
 }
 
 // function to select answer
 const selectAnswer = (event) => {
     const selectedButton = event.target;
-    countriesArr.forEach((country) => {
-
-    })
-}
+    if (selectedButton.dataset.answer === "correct") {
+        selectedButton.classList.add("correct");
+    } else {
+        selectedButton.classList.add("incorrect");
+    }
+    nextButton.classList.remove("hide");
+};
 
 //function to reset
 const reset = () => {

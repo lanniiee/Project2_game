@@ -59,6 +59,7 @@ body .quiz .question-display {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  padding: 10px;
 }
 body .quiz .answers {
   width: 100%;
@@ -79,6 +80,9 @@ body .quiz .answers .cards__answer {
   flex-wrap: wrap;
   background-color: rgb(255, 255, 255);
   opacity: 0.8;
+}
+body .footer {
+  margin: 10px;
 }
 body .footer .start-button, body .footer .next-button {
   width: 120px;
@@ -227,9 +231,9 @@ body .footer .hide {
   }
 }
 .correct {
-  color: greenyellow;
+  background-color: green;
 }
 
 .incorrect {
-  color: red;
+  background-color: red;
 }/*# sourceMappingURL=main.css.map */
