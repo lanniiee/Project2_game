@@ -14,6 +14,7 @@ const A = document.getElementById("A");
 const B = document.getElementById("B");
 const C = document.getElementById("C");
 const D = document.getElementById("D");
+let firstCounter = 0;
 
 
 // variables to later shuffle questions, and for current question
@@ -22,7 +23,7 @@ let currentQuestionIndex;
 
 
 // function to start
-const startQuiz = (event) => {
+const startQuiz = () => {
     startButton.classList.add("hide");
     nextButton.classList.remove("hide");
     randomQuestion = countriesArr.sort(() => Math.random() -0.5);
@@ -31,30 +32,26 @@ const startQuiz = (event) => {
 }
 
 // function to set new question
-const setNextQuestion = (question) => {
+const setNextQuestion = () => {
     displayNextQuestion(randomQuestion[currentQuestionIndex]);
 }
 
 // function to set next question
-const displayNextQuestion = (country) => {
-    countriesArr.forEach((country) => {
-        display.innerText = country.question;
-
-        A.innerText = country.A[0];
-        B.innerText = country.B[0];
-        C.innerText = country.C[0];
-        D.innerText = country.D[0];
-
-        A.dataset.answer = country.A[1];
-        B.dataset.answer = country.B[1];
-        C.dataset.answer = country.C[1];
-        D.dataset.answer = country.D[1];
-    })
-
+const displayNextQuestion = () => {
+    display.textContent = countriesArr[firstCounter].question;
+    A.textContent = countriesArr[firstCounter].A[0];
+    B.textContent = countriesArr[firstCounter].B[0];
+    C.textContent = countriesArr[firstCounter].C[0];
+    D.textContent = countriesArr[firstCounter].D[0];
+    
+    A.dataset.answer = countriesArr[firstCounter].A[1];
+    B.dataset.answer =countriesArr[firstCounter].B[1];
+    C.dataset.answer = countriesArr[firstCounter].C[1];
+    D.dataset.aanswer = countriesArr[firstCounter].D[1];
+    
+    firstCounter++;
     reset();
-
 }
-
 // function to select answer
 const selectAnswer = (event) => {
     const selectedButton = event.target;
@@ -83,4 +80,5 @@ const reset = () => {
 // Add event listener
 startButton.addEventListener("click", startQuiz);
 answersContainer.addEventListener("click", selectAnswer);
+nextButton.addEventListener("click", setNextQuestion);
 
