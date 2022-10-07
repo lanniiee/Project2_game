@@ -15,6 +15,7 @@ const B = document.getElementById("B");
 const C = document.getElementById("C");
 const D = document.getElementById("D");
 let firstCounter = 0;
+const cardAnswers = document.querySelectorAll(".cards__answer");
 
 
 // variables to later shuffle questions, and for current question
@@ -57,18 +58,21 @@ const selectAnswer = (event) => {
     const selectedButton = event.target;
     if (selectedButton.dataset.answer === "correct") {
         selectedButton.classList.add("correct");
-        selectedButton.style.backgroundColor = "green";
     } else {
         selectedButton.classList.add("incorrect");
-        selectedButton.style.backgroundColor = "red";
     }
     nextButton.classList.remove("hide");
+    calculateScores()
 };
 
-//function to reset
+//function to reset for next question
 const reset = () => {
     nextButton.classList.add("hide");
-}
+    A.classList.remove("correct", "incorrect");
+    B.classList.remove("correct", "incorrect");
+    C.classList.remove("correct", "incorrect");
+    D.classList.remove("correct", "incorrect");
+} 
 
 //function to reset page
 const resetPage = () => {
@@ -76,8 +80,6 @@ const resetPage = () => {
 }
 
 // function countdown
-
-// function
 
 // Add event listener
 startButton.addEventListener("click", startQuiz);

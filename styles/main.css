@@ -229,4 +229,11 @@ body .footer .hide {
     border-radius: 5px;
     font-size: 1.3rem;
   }
+}
+.correct {
+  background-color: green;
+}
+
+.incorrect {
+  background-color: red;
 }/*# sourceMappingURL=main.css.map */
