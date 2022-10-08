@@ -88,7 +88,7 @@ const calculateScores = (event) => {
     if (selectedButton.dataset.answer == "correct") {
         totalScores++;
     }
-    score.textContent = `Score: ${totalScores} / 17`;
+    score.textContent = `Score: ${totalScores} / ${countriesArr.length}`;
 }
 
 // function countdown

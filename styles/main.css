@@ -82,6 +82,7 @@ body .quiz .answers .cards__answer {
   flex-wrap: wrap;
   opacity: 0.8;
   box-shadow: 0 0 10px 5px black;
+  font-weight: bold;
 }
 body .footer {
   margin: 10px;
@@ -130,7 +131,7 @@ body .footer .hide {
     margin-bottom: 20px;
     border-radius: 10px;
     background-color: rgb(136, 136, 136);
-    opacity: 0.6;
+    opacity: 0.8;
     display: flex;
     justify-content: center;
     align-items: center;
