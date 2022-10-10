@@ -1,6 +1,6 @@
 export const mathQuestions = [
     {
-        question: "What is 7 x 9",
+        question: "What is 7 x 9?",
         A: ["63", "correct"],
         B: ["70", "incorrect"],
         C: ["79", "incorrect"],
@@ -16,7 +16,7 @@ export const mathQuestions = [
     },
 
     {
-        question: "What is 10% of £12",
+        question: "What is 10% of £12?",
         A: ["£12.00", "incorrect"],
         B: ["£12.10", "incorrect"],
         C: ["£1.10", "incorrect"],
