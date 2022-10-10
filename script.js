@@ -80,6 +80,7 @@ const reset = () => {
     B.classList.remove("correct", "incorrect");
     C.classList.remove("correct", "incorrect");
     D.classList.remove("correct", "incorrect");
+    messageDisplay.innerText = "";
 } 
 
 //function to reset page
