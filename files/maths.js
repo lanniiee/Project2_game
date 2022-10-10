@@ -1,4 +1,4 @@
-const mathQuestions = [
+export const mathQuestions = [
     {
         question: "What is 7 x 9",
         A: ["63", "correct"],

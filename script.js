@@ -1,5 +1,6 @@
 // make a js file of questions and answers. Then import to this js file.
 import { countriesArr } from "./files/countries.js";
+import { mathQuestions } from "./files/maths.js";
 
 
 // Select elements from HTML
@@ -21,7 +22,6 @@ const cardAnswers = document.querySelectorAll(".cards__answer");
 // variables to later shuffle questions, and for current question
 let randomQuestion;
 let currentQuestionIndex;
-
 
 // function to start with random question being declared
 const startQuiz = () => {
@@ -90,8 +90,6 @@ const calculateScores = (event) => {
     }
     score.textContent = `Score: ${totalScores} / ${countriesArr.length}`;
 }
-
-// function countdown
 
 // Add event listener
 startButton.addEventListener("click", startQuiz);
