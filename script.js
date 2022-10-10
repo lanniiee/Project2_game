@@ -23,7 +23,7 @@ let randomQuestion;
 let currentQuestionIndex;
 
 
-// function to start
+// function to start with random question being declared
 const startQuiz = () => {
     startButton.classList.add("hide");
     nextButton.classList.remove("hide");
