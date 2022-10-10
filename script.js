@@ -67,7 +67,7 @@ const selectAnswer = (event) => {
     }
 };
 
-//function to reset for next question
+//function to reset for next question 
 const reset = () => {
     nextButton.classList.add("hide");
     A.classList.remove("correct", "incorrect");
