@@ -21,18 +21,28 @@ body {
         justify-content: space-between;
         align-items: baseline;
         width: 340px;
-        height: 10vh;
+        height: 9vh;
+        margin-bottom: 10px;
         .home {
             width: 40px;
-            height: 40px;
+            height: 30px;
             text-shadow: 0 0 10px red;
-            margin-top: 20px;
+            margin-top: 10px;
         }
-        .countdown, .score {
+        .score {
             color: rgb(226, 226, 226);
             text-shadow: 0 0 10px rgb(65, 115, 65);
             font-size: 1rem;
             padding-bottom: 40px 0;
+        }
+        .message {
+            font-size: 12px;
+            text-shadow: 0 0 10px rgb(65, 115, 65);
+            text-align: center;
+            color: white;
+            word-wrap: break-word;
+            width: 120px;
+            height: 40px;
         }
     }
     .quiz {
@@ -42,7 +52,7 @@ body {
         justify-content: center;
         align-items: center;
         width: 300px;
-        height: 80vh;
+        height: 70vh;
         border-radius: 20px;
         box-shadow: 0 0 20px 10px black;
         .question-display {
@@ -84,10 +94,10 @@ body {
         }
     }
     .footer {
-        margin: 10px;
+        margin: 5px;
         .start-button, .next-button {
             width: 120px;
-            height: 40px;
+            height: 30px;
             border: 2px solid grey;
             border-radius: 5px;
             margin: 10px;
@@ -104,13 +114,18 @@ body {
         .navigation {
             width: 820px;
             height: 10vh;
+            padding-bottom: 20px;
             .home {
                 width: 50px;
                 height: 50px;
                 padding-left: 30px;
             }
-            .score, .countdown {
+            .score {
                 font-size: 2rem;
+            }
+            .message {
+                font-size: 1.6rem;
+                width: 500px
             }
         }
         .quiz {
@@ -178,8 +193,11 @@ body {
                 width: 60px;
                 height: 60px;
             }
-            .countdown, .score {
+            .score {
                 font-size: 3rem;
+            }
+            .message {
+                font-size: 2rem;
             }
         }
         .quiz {

@@ -4,6 +4,7 @@ import { mathQuestions } from "./files/maths.js";
 
 
 // Select elements from HTML
+const messageDisplay = document.querySelector(".message");
 const nextButton = document.querySelector(".next-button");
 const startButton = document.querySelector(".start-button");
 const display = document.querySelector(".question-display");
@@ -60,12 +61,17 @@ const selectAnswer = (event) => {
         const selectedButton = event.target;
         if (selectedButton.dataset.answer === "correct") {
             selectedButton.classList.add("correct");
+            messageDisplay.innerText = "Congratulation, that is correct!";
         } else if (selectedButton.dataset.answer === "incorrect") {
             selectedButton.classList.add("incorrect");
+            messageDisplay.innerText = "Opps! That is incorrect. Try again!"
         }
         nextButton.classList.remove("hide");
     }
 };
+
+// display message
+
 
 //function to reset for next question 
 const reset = () => {

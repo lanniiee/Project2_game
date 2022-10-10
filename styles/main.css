@@ -22,19 +22,29 @@ body .navigation {
   justify-content: space-between;
   align-items: baseline;
   width: 340px;
-  height: 10vh;
+  height: 9vh;
+  margin-bottom: 10px;
 }
 body .navigation .home {
   width: 40px;
-  height: 40px;
+  height: 30px;
   text-shadow: 0 0 10px red;
-  margin-top: 20px;
+  margin-top: 10px;
 }
-body .navigation .countdown, body .navigation .score {
+body .navigation .score {
   color: rgb(226, 226, 226);
   text-shadow: 0 0 10px rgb(65, 115, 65);
   font-size: 1rem;
   padding-bottom: 40px 0;
+}
+body .navigation .message {
+  font-size: 12px;
+  text-shadow: 0 0 10px rgb(65, 115, 65);
+  text-align: center;
+  color: white;
+  word-wrap: break-word;
+  width: 120px;
+  height: 40px;
 }
 body .quiz {
   padding: 20px;
@@ -43,7 +53,7 @@ body .quiz {
   justify-content: center;
   align-items: center;
   width: 300px;
-  height: 80vh;
+  height: 70vh;
   border-radius: 20px;
   box-shadow: 0 0 20px 10px black;
 }
@@ -85,11 +95,11 @@ body .quiz .answers .cards__answer {
   font-weight: bold;
 }
 body .footer {
-  margin: 10px;
+  margin: 5px;
 }
 body .footer .start-button, body .footer .next-button {
   width: 120px;
-  height: 40px;
+  height: 30px;
   border: 2px solid grey;
   border-radius: 5px;
   margin: 10px;
@@ -105,14 +115,19 @@ body .footer .hide {
   body .navigation {
     width: 820px;
     height: 10vh;
+    padding-bottom: 20px;
   }
   body .navigation .home {
     width: 50px;
     height: 50px;
     padding-left: 30px;
   }
-  body .navigation .score, body .navigation .countdown {
+  body .navigation .score {
     font-size: 2rem;
+  }
+  body .navigation .message {
+    font-size: 1.6rem;
+    width: 500px;
   }
   body .quiz {
     display: flex;
@@ -177,8 +192,11 @@ body .footer .hide {
     width: 60px;
     height: 60px;
   }
-  body .navigation .countdown, body .navigation .score {
+  body .navigation .score {
     font-size: 3rem;
+  }
+  body .navigation .message {
+    font-size: 2rem;
   }
   body .quiz {
     display: flex;
