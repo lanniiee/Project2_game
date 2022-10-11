@@ -133,5 +133,30 @@ export const countriesArr = [
         B: ["Nampo", "incorrect"],
         C: ["Sinuiju", "incorrect"],
         D: ["Chongjin", "incorrect"],
-    }
+    },
+
+    {
+        question: "What is the capital city of Afghanistan?",
+        A: ["Mazar-i-Sharif", "incorrect"],
+        B: ["Herat", "incorrect"],
+        C: ["Kabul", "correct"],
+        D: ["Lashkar Gah", "incorrect"],
+    },
+
+    {
+        question: "What is the capital city of Malaysia?",
+        A: ["George Town", "incorrect"],
+        B: ["Malacca", "incorrect"],
+        C: ["Kota Kinabalu"],
+        D: ["Kuala Lumpar", "correct"],
+    },
+
+    {
+        question: "What is the capital city of India?",
+        A: ["Stockholm", "correct"],
+        B: ["Malmo", "incorrect"],
+        C: ["Gothenburg", "incorrect"],
+        D: ["Uppsala", "incorrect"],
+    },
+
 ];
