@@ -2,13 +2,12 @@
 import { countriesArr } from "./files/countries.js";
 
 
-// Select elements from HTML
+// Select elements from HTML and variables
 const messageDisplay = document.querySelector(".message");
 const nextButton = document.querySelector(".next-button");
 const startButton = document.querySelector(".start-button");
 const display = document.querySelector(".question-display");
 const score = document.querySelector(".score");
-const countdown = document.querySelector(".score");
 const homeButton = document.querySelector(".home");
 const answersContainer = document.querySelector(".answers");
 const A = document.getElementById("A");
@@ -17,6 +16,8 @@ const C = document.getElementById("C");
 const D = document.getElementById("D");
 let firstCounter = 0;
 const cardAnswers = document.querySelectorAll(".cards__answer");
+let totalScores = 0;
+let answers = false;
 
 
 // variables to later shuffle questions, and for current question
@@ -54,11 +55,14 @@ const displayNextQuestion = () => {
     firstCounter++;
     reset();
 }
+
+
 // function to select answer
 const selectAnswer = (event) => {
     if (answersContainer.dataset.start === "true") {
         const selectedButton = event.target;
         if (selectedButton.dataset.answer === "correct") {
+            answers = true;
             selectedButton.classList.add("correct");
             messageDisplay.innerText = "Congratulation, that is correct!";
         } else if (selectedButton.dataset.answer === "incorrect") {
@@ -68,8 +72,6 @@ const selectAnswer = (event) => {
         nextButton.classList.remove("hide");
     }
 };
-
-// display message
 
 
 //function to reset for next question 
@@ -84,14 +86,16 @@ const reset = () => {
 
 //function to reset page
 const resetPage = () => {
+    totalScores = 0;
     score.textContent = `Scores:`;
     startButton.classList.remove("hide");
+    answersContainer.dataset.start = "";
     display.innerText = "";
     A.textContent = "";
     B.textContent = "";
     C.textContent = "";
     D.textContent = "";
-    totalScores = 0;
+
     A.dataset.answer = "";
     B.dataset.answer = "";
     C.dataset.answer = "";
@@ -99,7 +103,7 @@ const resetPage = () => {
     reset();
 }
 
-let totalScores = 0;
+
 // function to calculate score
 const calculateScores = (event) => {
     const selectedButton = event.target;
