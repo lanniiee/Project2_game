@@ -22,7 +22,7 @@ body .navigation {
   justify-content: space-between;
   align-items: baseline;
   width: 340px;
-  height: 7vh;
+  height: 50px;
   margin-bottom: 5px;
 }
 body .navigation .home {
@@ -56,7 +56,7 @@ body .quiz {
   height: 500px;
   border-radius: 20px;
   box-shadow: 0 0 20px 10px black;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 body .quiz .question-display {
   width: 100%;
@@ -93,6 +93,7 @@ body .quiz .answers .cards__answer {
   font-weight: bold;
 }
 body .footer {
+  height: 50px;
   margin-bottom: 15px;
 }
 body .footer .start-button, body .footer .next-button {
