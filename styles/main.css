@@ -72,7 +72,6 @@ body .quiz .question-display {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  padding: 10px;
 }
 body .quiz .answers {
   width: 100%;
@@ -80,7 +79,7 @@ body .quiz .answers {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
-  gap: 10px;
+  gap: 5px;
 }
 body .quiz .answers .cards__answer {
   width: auto;
@@ -188,9 +187,10 @@ body .footer .hide {
 @media screen and (min-width: 1200px) {
   body {
     font-size: 3rem;
+    width: 100vw;
   }
   body .navigation {
-    width: 1350px;
+    width: 1200px;
   }
   body .navigation .home {
     width: 60px;
