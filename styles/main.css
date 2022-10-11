@@ -22,8 +22,8 @@ body .navigation {
   justify-content: space-between;
   align-items: baseline;
   width: 340px;
-  height: 9vh;
-  margin-bottom: 10px;
+  height: 7vh;
+  margin-bottom: 5px;
 }
 body .navigation .home {
   width: 40px;
@@ -53,14 +53,14 @@ body .quiz {
   justify-content: center;
   align-items: center;
   width: 300px;
-  height: 70vh;
+  height: 600px;
   border-radius: 20px;
   box-shadow: 0 0 20px 10px black;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 body .quiz .question-display {
   width: 100%;
-  height: 20vh;
+  height: 100px;
   border: 2px solid black;
   margin-bottom: 30px;
   border-radius: 10px;
@@ -68,14 +68,12 @@ body .quiz .question-display {
   background-color: rgb(136, 136, 136);
   opacity: 0.8;
   font-weight: bolder;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+  word-wrap: break-word;
+  text-align: center;
 }
 body .quiz .answers {
   width: 100%;
-  height: 70vh;
+  height: 400px;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
