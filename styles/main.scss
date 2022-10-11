@@ -31,17 +31,17 @@ body {
         }
         .score {
             color: rgb(226, 226, 226);
-            text-shadow: 0 0 10px rgb(65, 115, 65);
+            text-shadow: 0 0 10px rgb(15, 55, 15);
             font-size: 1rem;
             padding-bottom: 40px 0;
         }
         .message {
             font-size: 12px;
-            text-shadow: 0 0 10px rgb(65, 115, 65);
+            text-shadow: 0 0 10px rgb(21, 48, 21);
             text-align: center;
             color: white;
             word-wrap: break-word;
-            width: 120px;
+            width: 130px;
             height: 20px;
         }
     }
@@ -58,6 +58,7 @@ body {
         margin-bottom: 5px;
         .question-display {
             word-wrap: break-word;
+            text-align: center;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -72,7 +73,6 @@ body {
             opacity: 0.8;
             padding: 5px;
             font-weight: bolder;
-            flex-wrap: wrap;
         }
         .answers {
             width: 100%;
