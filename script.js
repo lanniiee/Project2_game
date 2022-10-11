@@ -1,6 +1,5 @@
 // make a js file of questions and answers. Then import to this js file.
 import { countriesArr } from "./files/countries.js";
-import { mathQuestions } from "./files/maths.js";
 
 
 // Select elements from HTML
@@ -85,7 +84,19 @@ const reset = () => {
 
 //function to reset page
 const resetPage = () => {
-    location.reload();
+    score.textContent = `Scores:`;
+    startButton.classList.remove("hide");
+    display.innerText = "";
+    A.textContent = "";
+    B.textContent = "";
+    C.textContent = "";
+    D.textContent = "";
+    totalScores = 0;
+    A.dataset.answer = "";
+    B.dataset.answer = "";
+    C.dataset.answer = "";
+    D.dataset.answer = "";
+    reset();
 }
 
 let totalScores = 0;

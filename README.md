@@ -8,5 +8,7 @@ NOTE: if on mobile, use in portrait mode.
 
 3. Once answer is selected, selected will light up green if correct and red if incorrect.
 
-4. If you select the incorrect answer, NO WORRIES! try again! 
+4. Next question button will appear once you have selected your answer
+
+5. If you select the incorrect answer, NO WORRIES! try again! 
 This is all about learning! YAY!
