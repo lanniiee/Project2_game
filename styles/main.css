@@ -239,7 +239,7 @@ body .footer .hide {
     gap: 20px;
   }
   body .quiz .answers .cards__answer {
-    width: 600px;
+    width: 500px;
     height: 100px;
     border-radius: 10px;
     display: flex;
