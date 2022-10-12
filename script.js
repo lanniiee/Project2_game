@@ -18,10 +18,6 @@ let firstCounter = 0;
 const cardAnswers = document.querySelectorAll(".cards__answer");
 let totalScores = 0;
 let answers = false;
-
-
-
-
 let randomQuestion;
 let currentQuestionIndex;
 
@@ -58,7 +54,7 @@ const displayNextQuestion = () => {
 }
 
 
-// function to select answer
+
 const selectAnswer = (event) => {
     if (answersContainer.dataset.start === "true") {
         const selectedButton = event.target;
@@ -68,14 +64,14 @@ const selectAnswer = (event) => {
             messageDisplay.innerText = "Congratulation, that is correct!";
         } else if (selectedButton.dataset.answer === "incorrect") {
             selectedButton.classList.add("incorrect");
-            messageDisplay.innerText = "Opps! That is incorrect. Try again!"
+            messageDisplay.innerText = "That is incorrect."
         }
         nextButton.classList.remove("hide");
     }
 };
 
 
-
+// reset function when moving on to next question
 const reset = () => {
     nextButton.classList.add("hide");
     A.classList.remove("correct", "incorrect");
@@ -88,6 +84,7 @@ const reset = () => {
     C.disabled = false;
     D.disabled = false;
 } 
+
 
 
 
@@ -112,6 +109,7 @@ const resetPage = () => {
     C.disabled = true;
     D.disabled = true;
 }
+
 
 
 const disableButtons = (event) => {
@@ -143,6 +141,7 @@ const calculateScores = (event) => {
     }
     score.textContent = `Score: ${totalScores} / ${countriesArr.length}`;
 }
+
 
 
 startButton.addEventListener("click", startQuiz);
