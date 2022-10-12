@@ -168,7 +168,7 @@ body .footer .hide {
     gap: 20px;
   }
   body .quiz .answers .cards__answer {
-    width: 320px;
+    width: 500px;
     height: 150px;
     border-radius: 10px;
     display: flex;
@@ -239,7 +239,7 @@ body .footer .hide {
     gap: 20px;
   }
   body .quiz .answers .cards__answer {
-    width: 270px;
+    width: 500px;
     height: 100px;
     border-radius: 10px;
     display: flex;
@@ -247,7 +247,7 @@ body .footer .hide {
     align-items: center;
     flex-wrap: wrap;
     opacity: 0.7;
-    font-size: 1.3rem;
+    font-size: 2.1rem;
   }
   body .footer {
     height: 10vh;
