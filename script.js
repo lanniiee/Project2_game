@@ -1,8 +1,8 @@
-// make a js file of questions and answers. Then import to this js file.
+
 import { countriesArr } from "./files/countries.js";
 
 
-// Select elements from HTML and variables
+
 const messageDisplay = document.querySelector(".message");
 const nextButton = document.querySelector(".next-button");
 const startButton = document.querySelector(".start-button");
@@ -20,11 +20,12 @@ let totalScores = 0;
 let answers = false;
 
 
-// variables to later shuffle questions, and for current question
+
+
 let randomQuestion;
 let currentQuestionIndex;
 
-// function to start with random question being declared
+
 const startQuiz = () => {
     startButton.classList.add("hide");
     nextButton.classList.remove("hide");
@@ -34,12 +35,12 @@ const startQuiz = () => {
     answersContainer.dataset.start = "true";
 }
 
-// function to set new question random
+
 const setNextQuestion = () => {
     displayNextQuestion(randomQuestion[currentQuestionIndex]);
 }
 
-// function to set next question when clicking next button
+
 const displayNextQuestion = () => {
     display.textContent = countriesArr[firstCounter].question;
     A.textContent = countriesArr[firstCounter].A[0];
@@ -74,7 +75,7 @@ const selectAnswer = (event) => {
 };
 
 
-//function to reset for next question 
+
 const reset = () => {
     nextButton.classList.add("hide");
     A.classList.remove("correct", "incorrect");
@@ -82,9 +83,14 @@ const reset = () => {
     C.classList.remove("correct", "incorrect");
     D.classList.remove("correct", "incorrect");
     messageDisplay.innerText = "";
+    A.disabled = false;
+    B.disabled = false;
+    C.disabled = false;
+    D.disabled = false;
 } 
 
-//function to reset page
+
+
 const resetPage = () => {
     totalScores = 0;
     score.textContent = `Scores:`;
@@ -101,10 +107,35 @@ const resetPage = () => {
     C.dataset.answer = "";
     D.dataset.answer = "";
     reset();
+    A.disabled = true;
+    B.disabled = true;
+    C.disabled = true;
+    D.disabled = true;
 }
 
 
-// function to calculate score
+const disableButtons = (event) => {
+    const selectedButton = event.target;
+    if (selectedButton === A) {
+        B.disabled = true;
+        C.disabled = true;
+        D.disabled = true;
+    } else if (selectedButton === B) {
+        A.disabled = true;
+        C.disabled = true;
+        D.disabled = true;
+    } else if (selectedButton === C) {
+        A.disabled = true;
+        B.disabled = true;
+        D.disabled = true;
+    } else if (selectedButton === D) {
+        A.disabled = true;
+        B.disabled = true;
+        C.disabled = true;
+    }
+}
+
+
 const calculateScores = (event) => {
     const selectedButton = event.target;
     if (selectedButton.dataset.answer == "correct") {
@@ -113,9 +144,10 @@ const calculateScores = (event) => {
     score.textContent = `Score: ${totalScores} / ${countriesArr.length}`;
 }
 
-// Add event listener
+
 startButton.addEventListener("click", startQuiz);
 answersContainer.addEventListener("click", selectAnswer);
 nextButton.addEventListener("click", setNextQuestion);
 homeButton.addEventListener("click", resetPage);
 answersContainer.addEventListener("click", calculateScores);
+answersContainer.addEventListener("click", disableButtons);
