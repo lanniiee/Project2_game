@@ -153,10 +153,10 @@ export const countriesArr = [
 
     {
         question: "What is the capital city of India?",
-        A: ["Stockholm", "correct"],
-        B: ["Malmo", "incorrect"],
-        C: ["Gothenburg", "incorrect"],
-        D: ["Uppsala", "incorrect"],
+        A: ["Kolkata", "incorrect"],
+        B: ["Jaipur", "incorrect"],
+        C: ["New Delhi", "correct"],
+        D: ["Mumbai", "incorrect"],
     },
 
 ];
